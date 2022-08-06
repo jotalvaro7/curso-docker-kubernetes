@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv
+spec:
+  capacity:
+    storage: 2Gi
+  volumeMode: Filesystem
+  storageClassName: standard # POR SER DE MINIKUBE (kubectl get sc)
+  accessModes:
+    - ReadWriteOnce #CUANDO ES UNA SOLA MAQUINA UN SOLO NODO
+  hostPath:
+    path: /var/lib/mysql
+    type: DirectoryOrCreate
+
