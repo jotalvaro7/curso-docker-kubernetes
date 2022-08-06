@@ -29,11 +29,7 @@ J
 cmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/clients/CursoClienteRest.java,5\e\5e38abb4997f150a95d4af54aa47598aebc15a32
 ˜
 hmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/controllers/UsuarioController.java,d\b\db2aba668e32390c69051206cf0eae8d487f321a
->
-svc-mysql.yaml,9\b\9b0db2ab34a3a5957926da25c209c47ea9b9e595
 A
 svc-postgres.yaml,f\c\fccbc189cc06dc002b6b32a9abeef88414116d27
-F
-deployment-cursos.yaml,e\0\e050b4df97b013dff2d728afa917fe70ec744a90
 H
 deployment-usuarios.yaml,d\a\dadd02310aba87dea49f12d5e39dfc4a704f58ba

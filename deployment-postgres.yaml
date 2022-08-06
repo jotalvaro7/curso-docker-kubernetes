@@ -26,6 +26,7 @@ spec:
           volumeMounts:
             - name: data-postgres
               mountPath: /var/lib/postgresql/data
+      #Trabajando con volume hostPath
       volumes:
         - name: data-postgres
           hostPath:
