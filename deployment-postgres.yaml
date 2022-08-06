@@ -22,3 +22,12 @@ spec:
               value: sasa
             - name: POSTGRES_DB
               value: msvc_cursos
+          #Se externaliza el volumen del contenedor
+          volumeMounts:
+            - name: data-postgres
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: data-postgres
+          hostPath:
+            path: /var/lib/postgresql/data
+            type: DirectoryOrCreate
