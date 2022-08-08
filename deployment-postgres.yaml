@@ -19,10 +19,15 @@ spec:
             - containerPort: 5432
           env:
             - name: POSTGRES_PASSWORD
-              value: sasa
+              valueFrom:
+                configMapKeyRef:
+                  name: msvc-cursos
+                  key: password
             - name: POSTGRES_DB
-              value: msvc_cursos
-          #Se externaliza el volumen del contenedor
+              valueFrom:
+                configMapKeyRef:
+                  name: msvc-cursos
+                  key: database
           volumeMounts:
             - name: data-postgres
               mountPath: /var/lib/postgresql/data
