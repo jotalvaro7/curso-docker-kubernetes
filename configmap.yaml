@@ -6,8 +6,8 @@ data:
   port: "8001"
   db_host: mysql8:3306
   database: msvc_usuarios
-  username: root
-  password: sasa
+  #username: root
+  #password: sasa
   cursos_url: msvc-cursos:8002
 
 ---
@@ -20,6 +20,6 @@ data:
   port: "8002"
   db_host: postgres14:5432
   database: msvc_cursos
-  username: postgres
-  password: sasa
+  #username: postgres
+  #password: sasa
   usuarios_url: msvc-usuarios:8001
