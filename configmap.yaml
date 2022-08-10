@@ -9,7 +9,9 @@ data:
   #username: root
   #password: sasa
   cursos_url: msvc-cursos:8002
-
+  application.yaml: |-
+    config:
+      texto: Configurando ambiente por defecto
 ---
 
 apiVersion: v1
