@@ -37,3 +37,17 @@ L
 docker-compose-usuarios.yaml,3\b\3b7c36dc344125ca959846f87ae2c9cff9d03736
 J
 docker-compose-cursos.yaml,9\d\9d323aadffc34d6537bce24b8bf7e2f70b85c3ca
+C
+docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
+A
+svc-postgres.yaml,f\c\fccbc189cc06dc002b6b32a9abeef88414116d27
+;
+secret.yaml,7\5\7559e0bc0e0b65a5455618cb9db332ae8d50fb8e
+H
+deployment-postgres.yaml,4\e\4e83ac1b137ac7de030f1d0e5ebf80c3039449e8
+“
+cmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/clients/CursoClienteRest.java,5\e\5e38abb4997f150a95d4af54aa47598aebc15a32
+E
+deployment-mysql.yaml,3\7\372dbac7ab71ec3a6c5cf1cf0f9282bab28b7482
+’
+bmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/MsvcUsuariosApplication.java,6\c\6c87cc0d8f785eed1ab15b6f433f163d6e214222
