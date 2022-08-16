@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: msvc-cursos
+          uri: lb://msvc-cursos #lb (Load Balancer)
+          predicates:
+            - Path=/api/cursos/**
+          filters:
+            - StripPrefix=2 #(Porque api/cursos = 2 palabras)
+        - id: msvc-usuarios
+          uri: lb://msvc-usuarios
+          predicates:
+            - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=2
