@@ -37,7 +37,5 @@ H
 deployment-postgres.yaml,4\e\4e83ac1b137ac7de030f1d0e5ebf80c3039449e8
 ’
 bmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/MsvcUsuariosApplication.java,6\c\6c87cc0d8f785eed1ab15b6f433f163d6e214222
-F
-deployment-cursos.yaml,e\0\e050b4df97b013dff2d728afa917fe70ec744a90
 H
 msvc-usuarios/.gitignore,9\8\98fcf172d840cc6ced3146b8a6bb2d73090a39ea
