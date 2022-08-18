@@ -6,9 +6,14 @@ spec:
   capacity:
     storage: 2Gi
   volumeMode: Filesystem
-  storageClassName: standard # POR SER DE MINIKUBE (kubectl get sc)
+  storageClassName: "" #Para subirlo a EKS
+  #storageClassName: standard # POR SER DE MINIKUBE (kubectl get sc)
   accessModes:
-    - ReadWriteOnce #CUANDO ES UNA SOLA MAQUINA UN SOLO NODO
-  hostPath:
-    path: /var/lib/postgresql/data
-    type: DirectoryOrCreate
+    - ReadWriteMany #Cuando es multinodo en EKS La nube
+    #- ReadWriteOnce #CUANDO ES UNA SOLA MAQUINA UN SOLO NODO
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-0ca876898acd84570
+  #hostPath:
+  #  path: /var/lib/postgresql/data
+  #  type: DirectoryOrCreate

@@ -6,10 +6,15 @@ spec:
   capacity:
     storage: 2Gi
   volumeMode: Filesystem
-  storageClassName: standard # POR SER DE MINIKUBE (kubectl get sc)
+  #storageClassName: standard # POR SER DE MINIKUBE (kubectl get sc)
+  storageClassName: "" #Para subirlo a EKS
   accessModes:
-    - ReadWriteOnce #CUANDO ES UNA SOLA MAQUINA UN SOLO NODO
-  hostPath:
-    path: /var/lib/mysql
-    type: DirectoryOrCreate
+    #- ReadWriteOnce #CUANDO ES UNA SOLA MAQUINA UN SOLO NODO
+    - ReadWriteMany #Cuando es multinodo en EKS La nube
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-0cc0e12011bce8d21
+  #hostPath:
+  #  path: /var/lib/mysql
+  #  type: DirectoryOrCreate
 

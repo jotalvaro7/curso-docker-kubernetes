@@ -5,8 +5,10 @@ metadata:
 spec:
   volumeName: mysql-pv #el mismo nombre del archivo pv
   accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
+    #- ReadWriteOnce
+    - ReadWriteMany
+  storageClassName: ""
+  #storageClassName: standard
   resources:
     requests:
       storage: 2Gi
