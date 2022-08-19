@@ -1,6 +1,7 @@
 package org.osorioJulio.springcloud.msvc.usuarios;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -12,12 +13,19 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated()
+        http.authorizeRequests()
+                .antMatchers("/authorized").permitAll()
+                .antMatchers(HttpMethod.GET, "/", "/{id}").hasAnyAuthority("SCOPE_read", "SCOPE_write")
+                .antMatchers(HttpMethod.POST, "/").hasAuthority("SCOPE_write")
+                .antMatchers(HttpMethod.PUT, "/{id}").hasAuthority("SCOPE_write")
+                .antMatchers(HttpMethod.DELETE, "/{id}").hasAuthority("SCOPE_write")
+                .anyRequest().authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .oauth2Login(oauth2Login -> oauth2Login.loginPage("/oauth2/authorization/msvc-usuarios-client"))
-                .oauth2Client(withDefaults());
+                .oauth2Client(withDefaults())
+                .oauth2ResourceServer().jwt();
 
         return http.build();
     }
