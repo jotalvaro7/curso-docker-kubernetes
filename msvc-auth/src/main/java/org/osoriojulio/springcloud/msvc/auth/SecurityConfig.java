@@ -81,17 +81,17 @@ public class SecurityConfig {
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
         RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("messaging-client")
+                .clientId("usuarios-client")
                 .clientSecret("{noop}12345")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
-                .redirectUri("http://127.0.0.1:8001/login/oauth2/code/messaging-client-oidc")
+                .redirectUri("http://127.0.0.1:8001/login/oauth2/code/msvc-usuarios-client")
                 .redirectUri("http://127.0.0.1:8001/authorized")
                 .scope(OidcScopes.OPENID)
-                .scope("message.read")
-                .scope("message.write")
+                .scope("read")
+                .scope("write")
                 .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
                 .build();
 
