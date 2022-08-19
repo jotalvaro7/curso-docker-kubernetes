@@ -1,10 +1,10 @@
 spring:
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${LB_AUTH_ISSUER_URI:http://127.0.0.1:9000}
       client:
-        resourceserver:
-          jwt:
-            issuer-uri: ${LB_AUTH_ISSUER_URI:http://127.0.0.1:9000}
         registration:
           msvc-usuarios-client:
             provider: spring
