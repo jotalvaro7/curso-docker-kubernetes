@@ -43,16 +43,8 @@ A
 cmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/clients/CursoClienteRest.java,5\e\5e38abb4997f150a95d4af54aa47598aebc15a32
 H
 msvc-usuarios/Dockerfile,d\e\de40dde59f25d8bcce2561fd6e1df3af43f1c2ba
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-E
-msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
 C
 msvc-cursos/pom.xml,c\9\c992d90804b37b1ae4d2f0e63baab9da8288400a
-è
-_msvc-gateway/src/main/java/org/osoriojulio/springcloud/msvc/gateway/MsvcGatewayApplication.java,a\9\a9c8fcb690140486f05854c5b8959a0730870d5c
-D
-msvc-gateway/pom.xml,1\2\1252d205d77cac907958911ed14179caca9f6900
 G
 msvc-gateway/Dockerfile,7\2\729b9d5fe748d3e8772bfe7c3fe003d6cc49b32f
 F
