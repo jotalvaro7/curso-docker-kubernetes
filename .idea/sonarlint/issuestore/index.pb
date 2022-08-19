@@ -49,5 +49,3 @@ F
 deployment-cursos.yaml,e\0\e050b4df97b013dff2d728afa917fe70ec744a90
 ?
 svc-cursos.yaml,2\d\2dd245599d1e3ab247d29a375a9c6edea95e3f6a
-<
-gateway.yaml,2\6\26e2c6634a8391d07db0d6ee32c38ebe0d95d04b
