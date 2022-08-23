@@ -3,8 +3,6 @@
 `msvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/models/entity/Usuario.java,c\e\ced00497ffcf6c261bc55dc322dec739328c4d6f
 ‘
 amsvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/models/entity/CursoUsuario.java,9\4\944346a598b65b1e8a80109f5138f93e35f1f219
-…
-Umsvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/models/Usuario.java,9\c\9c427eb0f77bcdf8019d1bb5a7093e6a4bd2f10f
 F
 msvc-cursos/Dockerfile,4\b\4bf2c313456efff4643e285fda6742f8cebeb3c6
 ’
