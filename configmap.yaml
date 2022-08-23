@@ -9,8 +9,8 @@ data:
   #username: root
   #password: sasa
   cursos_url: msvc-cursos:8002
-  lb_auth_issuer_uri: http://172.19.104.55:31588
-  lb_usuarios_uri: http://172.19.104.55:31432
+  lb_auth_issuer_uri: http://172.19.110.227:32297
+  lb_usuarios_uri: http://172.19.110.227:31432
   application.yaml: |-
     config:
       texto: Configurando ambiente por defecto
