@@ -37,8 +37,6 @@ E
 deployment-mysql.yaml,3\7\372dbac7ab71ec3a6c5cf1cf0f9282bab28b7482
 A
 svc-usuarios.yaml,1\4\1406f88ea6a786ace84480f0bb2087945c3c3a44
-“
-cmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/clients/CursoClienteRest.java,5\e\5e38abb4997f150a95d4af54aa47598aebc15a32
 H
 msvc-usuarios/Dockerfile,d\e\de40dde59f25d8bcce2561fd6e1df3af43f1c2ba
 G
@@ -61,8 +59,6 @@ D
 Vmsvc-auth/src/main/java/org/osoriojulio/springcloud/msvc/auth/MsvcAuthApplication.java,f\1\f15cbe0a113d019bfb192d6337a01c289d176473
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-A
-msvc-auth/pom.xml,4\d\4d6853ba02dd0ff16bbf80c6f16332667aef59b3
 D
 msvc-auth/Dockerfile,e\9\e9b33681eefd07601c21f0090804848e194bb84b
 E
