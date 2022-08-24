@@ -5,16 +5,12 @@
 amsvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/models/entity/CursoUsuario.java,9\4\944346a598b65b1e8a80109f5138f93e35f1f219
 F
 msvc-cursos/Dockerfile,4\b\4bf2c313456efff4643e285fda6742f8cebeb3c6
-í
-bmsvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/controllers/CursoController.java,3\b\3be60d7b26b1b71e589cb0156d2dae04a3a0bd3f
 @
 msvc-cursos/.env,b\e\bed46cd06363076a2750e530c33ee52c21c33a31
 B
 msvc-usuarios/.env,0\4\0469e942a4e8d7af4a5b9965c5e065884065c795
 å
 \msvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/MsvcCursosApplication.java,9\4\94f39f6102ef8fc99f9e4f52aa2bb7eef3e6c398
-ê
-`msvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/clients/UsuarioClientRest.java,1\c\1c57d91bc257156b87cda23a46fca2c7ba0f8869
 L
 docker-compose-usuarios.yaml,3\b\3b7c36dc344125ca959846f87ae2c9cff9d03736
 J
@@ -67,3 +63,9 @@ F
 deployment-cursos.yaml,e\0\e050b4df97b013dff2d728afa917fe70ec744a90
 C
 msvc-cursos/pom.xml,c\9\c992d90804b37b1ae4d2f0e63baab9da8288400a
+ì
+cmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/clients/CursoClienteRest.java,5\e\5e38abb4997f150a95d4af54aa47598aebc15a32
+A
+msvc-auth/pom.xml,4\d\4d6853ba02dd0ff16bbf80c6f16332667aef59b3
+Ö
+Umsvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/models/Usuario.java,9\c\9c427eb0f77bcdf8019d1bb5a7093e6a4bd2f10f

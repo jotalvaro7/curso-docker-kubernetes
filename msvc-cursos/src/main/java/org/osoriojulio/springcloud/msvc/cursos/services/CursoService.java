@@ -16,9 +16,9 @@ public interface CursoService {
 
 
     //TODO LOGICA DE NEGOCIO DESDE OTRO MICROSERVICIO
-    Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId);
-    Optional<Usuario> crearUsuario(Usuario usuario, Long cursoId);
-    Optional<Usuario> eliminarUsuarioDelCurso(Usuario usuario, Long cursoId);
+    Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId, String token);
+    Optional<Usuario> crearUsuario(Usuario usuario, Long cursoId, String token);
+    Optional<Usuario> eliminarUsuarioDelCurso(Usuario usuario, Long cursoId, String token);
 
-    Optional<Curso> porIdConUsuarios(Long id);
+    Optional<Curso> porIdConUsuarios(Long id, String token);
 }

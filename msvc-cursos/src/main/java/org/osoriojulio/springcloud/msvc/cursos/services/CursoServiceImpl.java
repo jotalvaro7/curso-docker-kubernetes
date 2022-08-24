@@ -57,10 +57,10 @@ public class CursoServiceImpl implements CursoService{
     //TODO LOGICA DE NEGOCIO PARA REALIZAR LA COMUNICACION CON EL MSVC USUARIOS
     @Override
     @Transactional
-    public Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId) {
+    public Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId, String token) {
         Optional<Curso> optional = cursoRepository.findById(cursoId);
         if(optional.isPresent()){
-            Usuario usuarioMsvc = client.detalle(usuario.getId());
+            Usuario usuarioMsvc = client.detalle(usuario.getId(), token);
 
             Curso curso = optional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
@@ -76,10 +76,10 @@ public class CursoServiceImpl implements CursoService{
 
     @Override
     @Transactional
-    public Optional<Usuario> crearUsuario(Usuario usuario, Long cursoId) {
+    public Optional<Usuario> crearUsuario(Usuario usuario, Long cursoId, String token) {
         Optional<Curso> optional = cursoRepository.findById(cursoId);
         if(optional.isPresent()){
-            Usuario usuarioNuevoMsvc = client.crear(usuario);
+            Usuario usuarioNuevoMsvc = client.crear(usuario, token);
 
             Curso curso = optional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
@@ -95,10 +95,10 @@ public class CursoServiceImpl implements CursoService{
 
     @Override
     @Transactional
-    public Optional<Usuario> eliminarUsuarioDelCurso(Usuario usuario, Long cursoId) {
+    public Optional<Usuario> eliminarUsuarioDelCurso(Usuario usuario, Long cursoId, String token) {
         Optional<Curso> optional = cursoRepository.findById(cursoId);
         if(optional.isPresent()){
-            Usuario usuarioMsvc = client.detalle(usuario.getId());
+            Usuario usuarioMsvc = client.detalle(usuario.getId(), token);
 
             Curso curso = optional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
@@ -114,7 +114,7 @@ public class CursoServiceImpl implements CursoService{
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Curso> porIdConUsuarios(Long id) {
+    public Optional<Curso> porIdConUsuarios(Long id, String token) {
         Optional<Curso> optionalCurso = cursoRepository.findById(id);
         if(optionalCurso.isPresent()){
             Curso curso = optionalCurso.get();
@@ -123,7 +123,7 @@ public class CursoServiceImpl implements CursoService{
                         .map(cursoUsuario -> cursoUsuario.getUsuarioId())
                         .collect(Collectors.toList());
 
-                List<Usuario> usuarios = client.obtenerAlumnosPorCurso(ids);
+                List<Usuario> usuarios = client.obtenerAlumnosPorCurso(ids, token);
                 curso.setUsuarios(usuarios);
             }
             return Optional.of(curso);

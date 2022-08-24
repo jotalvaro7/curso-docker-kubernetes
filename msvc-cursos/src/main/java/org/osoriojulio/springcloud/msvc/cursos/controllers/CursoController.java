@@ -25,8 +25,8 @@ public class CursoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> detalle(@PathVariable Long id){
-        Optional<Curso> curso = cursoService.porIdConUsuarios(id);
+    public ResponseEntity<?> detalle(@PathVariable Long id,  @RequestHeader(value = "Authorization", required = true) String token){
+        Optional<Curso> curso = cursoService.porIdConUsuarios(id, token);
         if(curso.isPresent()){
             return ResponseEntity.ok(curso.get());
         }
@@ -70,10 +70,10 @@ public class CursoController {
 
     //TODO METODOS PARA REALIZAR LA COMUNICACION CON EL OTRO MICROSERVICIO
     @PutMapping("/asignar-usuario/{cursoId}")
-    public ResponseEntity<?> asignarUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId){
+    public ResponseEntity<?> asignarUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId, @RequestHeader(value="Authorization", required = true) String token){
         Optional<Usuario> optionalUsuario;
         try{
-            optionalUsuario = cursoService.asignarUsuario(usuario, cursoId);
+            optionalUsuario = cursoService.asignarUsuario(usuario, cursoId, token);
         }catch (FeignException e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(Collections.singletonMap("mensaje", "No existe el usuario por" +
@@ -86,10 +86,10 @@ public class CursoController {
     }
 
     @PostMapping("/crear-usuario/{cursoId}")
-    public ResponseEntity<?> crearUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId){
+    public ResponseEntity<?> crearUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId, @RequestHeader(value="Authorization", required = true) String token){
         Optional<Usuario> optionalUsuario;
         try{
-            optionalUsuario = cursoService.crearUsuario(usuario, cursoId);
+            optionalUsuario = cursoService.crearUsuario(usuario, cursoId, token);
         }catch (FeignException e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(Collections.singletonMap("mensaje", "No se pudo crear el usuario o" +
@@ -102,10 +102,10 @@ public class CursoController {
     }
 
     @DeleteMapping("/eliminar-usuario/{cursoId}")
-    public ResponseEntity<?> eliminarUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId){
+    public ResponseEntity<?> eliminarUsuario(@RequestBody Usuario usuario, @PathVariable Long cursoId, @RequestHeader(value="Authorization", required = true) String token){
         Optional<Usuario> optionalUsuario;
         try{
-            optionalUsuario = cursoService.eliminarUsuarioDelCurso(usuario, cursoId);
+            optionalUsuario = cursoService.eliminarUsuarioDelCurso(usuario, cursoId, token);
         }catch (FeignException e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(Collections.singletonMap("mensaje", "No existe el usuario por" +
