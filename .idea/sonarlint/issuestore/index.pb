@@ -13,8 +13,6 @@ B
 \msvc-cursos/src/main/java/org/osoriojulio/springcloud/msvc/cursos/MsvcCursosApplication.java,9\4\94f39f6102ef8fc99f9e4f52aa2bb7eef3e6c398
 L
 docker-compose-usuarios.yaml,3\b\3b7c36dc344125ca959846f87ae2c9cff9d03736
-J
-docker-compose-cursos.yaml,9\d\9d323aadffc34d6537bce24b8bf7e2f70b85c3ca
 A
 svc-postgres.yaml,f\c\fccbc189cc06dc002b6b32a9abeef88414116d27
 ;
@@ -25,8 +23,6 @@ H
 bmsvc-usuarios/src/main/java/org/osorioJulio/springcloud/msvc/usuarios/MsvcUsuariosApplication.java,6\c\6c87cc0d8f785eed1ab15b6f433f163d6e214222
 H
 msvc-usuarios/.gitignore,9\8\98fcf172d840cc6ced3146b8a6bb2d73090a39ea
-C
-docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
 E
 deployment-mysql.yaml,3\7\372dbac7ab71ec3a6c5cf1cf0f9282bab28b7482
 A
@@ -59,8 +55,6 @@ E
 msvc-usuarios/pom.xml,3\5\35db51b5be2bab04530d7f81843e70f086e9aaf0
 <
 gateway.yaml,2\6\26e2c6634a8391d07db0d6ee32c38ebe0d95d04b
-F
-deployment-cursos.yaml,e\0\e050b4df97b013dff2d728afa917fe70ec744a90
 C
 msvc-cursos/pom.xml,c\9\c992d90804b37b1ae4d2f0e63baab9da8288400a
 “
